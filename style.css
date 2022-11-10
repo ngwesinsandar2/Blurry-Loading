@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #242423;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    position: relative;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 15px;
+    flex: 0.5;
+    transition: flex .5s ease-in, border-radius .5s ease-in;
+}
+
+.image1 {
+    background-image: url(./images/1.jpg);
+}
+
+.image2 {
+    background-image: url(./images/2.jpg);
+}
+
+.image3 {
+    background-image: url(./images/3.jpg);
+}
+
+.image4 {
+    background-image: url(./images/4.jpg);
+}
+
+.image5 {
+    background-image: url(./images/5.jpg);
+}
+
+.image6 {
+    background-image: url(./images/6.jpg);
+}
+
+.image7 {
+    background-image: url(./images/7.jpg);
+}
+
+.image8 {
+    background-image: url(./images/8.jpg);
+}
+
+.image9 {
+    background-image: url(./images/9.jpg);
+}
+
+.image10 {
+    background-image: url(./images/10.jpg);
+}
+
+.title {
+    position: absolute;
+    bottom: 20px;
+    left: 17px;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+.panel.active {
+    flex: 1.5;
+    border-radius: 25px;
+}
+
+.panel.active .title {
+    opacity: 1;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body {
+        height: 100%;
+    }
+    .container {
+        flex-direction: column;
+        height: 1500px;
+    }
+    .panel {
+        background-size: cover;
+        margin: 8px;
+        border-radius: 50px;
+        transition: flex .7s ease-in, border-radius .7s ease-in;
+    }
+    .panel.active {
+        flex: 2;
+        border-radius: 15px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        height: 100%;
+    }
+    .container {
+        flex-direction: column;
+        height: 1500px;
+    }
+    .panel {
+        background-size: cover;
+        margin: 8px;
+        border-radius: 50px;
+    }
+    .panel.active {
+        flex: 5;
+        border-radius: 25px;
+    }
+}
